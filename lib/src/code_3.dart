@@ -50,7 +50,7 @@ class ImageListView extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: _appBar(),
+//      appBar: _appBar(),
       body: _listView(),
     );
   }
