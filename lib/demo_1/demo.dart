@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'code_3.dart';
-class Navigation extends StatelessWidget {
+import 'a_Listdemo.dart';
+import 'b_TextDemo.dart';
+import 'c_LayOutDemo.dart';
+class Demo_1 extends StatelessWidget {
   @override
 
-//  int _currentIndex = 0;
-//  void _onTapHandler(int index){
-////      setState()
-//  }
 
   Widget build(BuildContext context) {
 
     return new DefaultTabController(
         length: 3,
         child: new Scaffold(
-          backgroundColor: Colors.grey[100],
-          appBar: _appBar(),
-          body: _body(),
-          drawer: _drawer(context),
-          bottomNavigationBar:BottomNavigationBarDemo()
+            backgroundColor: Colors.grey[100],
+            appBar: _appBar(),
+            body: _body(),
+            drawer: _drawer(context),
+            bottomNavigationBar:BottomNavigationBarDemo()
         ));
   }
 
@@ -25,13 +23,6 @@ class Navigation extends StatelessWidget {
   Widget _appBar() {
     return new AppBar(
       title: new Text('Navigation'), // 标题
-//      leading:
-//      IconButton(
-//        // 导航左按钮
-//        icon: Icon(Icons.menu),
-//        tooltip: 'Navigration',
-//        onPressed: () => debugPrint('- click appBar leftBtn'),
-//      ),
       actions: <Widget>[
         // 导航右按钮
         IconButton(
@@ -42,8 +33,8 @@ class Navigation extends StatelessWidget {
       ],
 
       bottom: new TabBar(
-          unselectedLabelColor: Colors.black38,
-          indicatorColor: Colors.black54,
+          unselectedLabelColor: Colors.white54,
+          indicatorColor: Colors.white,
           indicatorSize: TabBarIndicatorSize.label,
           indicatorWeight: 1.0,
           tabs: <Widget>[
@@ -57,10 +48,29 @@ class Navigation extends StatelessWidget {
 //  展世层
   Widget _body() {
     return new TabBarView(children: <Widget>[
-      ImageListView(),
-//      Tab(icon: Icon(Icons.local_florist)),
-      Tab(icon: Icon(Icons.change_history)),
-      Tab(icon: Icon(Icons.directions_bike)),
+
+      /*
+        - 图文滚动列表
+      */
+      DemoOne(),
+
+      /*
+        - 基础部件
+        1. 文本 -> Text
+        2. 行内多样式 -> RichText
+        3. 容器 -> Container
+        4. 装饰盒子 -> BoxDecoration -> 边框，圆角，阴影，形状，渐变。背景图像
+      */
+      DemoTwo(),
+
+      /*
+        - 基础部件
+        1. 文本 -> Text
+        2. 行内多样式 -> RichText
+        3. 容器 -> Container
+        4. 装饰盒子 -> BoxDecoration -> 边框，圆角，阴影，形状，渐变。背景图像
+      */
+      layoutDemo(),
     ]);
   }
 
@@ -70,14 +80,6 @@ class Navigation extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-//          文字head
-//          DrawerHeader(
-//            child: Text('DrawerHeader'.toUpperCase()),
-//            decoration: BoxDecoration(
-//              color: Colors.grey[100],
-//            ),
-//          ),
-
 //        用户head
           UserAccountsDrawerHeader(
             accountName: Text(
