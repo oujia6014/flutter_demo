@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 4. 带限制的容器 -> ConstrainedBox
 */
 
-class layoutDemo extends StatelessWidget {
+class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

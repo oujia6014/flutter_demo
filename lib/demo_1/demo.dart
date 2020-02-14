@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'a_Listdemo.dart';
 import 'b_TextDemo.dart';
 import 'c_LayOutDemo.dart';
+import 'd_ViewDemo.dart';
 class Demo_1 extends StatelessWidget {
   @override
 
@@ -9,7 +10,7 @@ class Demo_1 extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return new DefaultTabController(
-        length: 3,
+        length: 4,
         child: new Scaffold(
             backgroundColor: Colors.grey[100],
             appBar: _appBar(),
@@ -41,6 +42,7 @@ class Demo_1 extends StatelessWidget {
             Tab(icon: Icon(Icons.local_florist)),
             Tab(icon: Icon(Icons.change_history)),
             Tab(icon: Icon(Icons.directions_bike)),
+            Tab(icon: Icon(Icons.android)),
           ]),
     );
   }
@@ -65,12 +67,20 @@ class Demo_1 extends StatelessWidget {
 
       /*
         - 基础部件
-        1. 文本 -> Text
-        2. 行内多样式 -> RichText
-        3. 容器 -> Container
-        4. 装饰盒子 -> BoxDecoration -> 边框，圆角，阴影，形状，渐变。背景图像
+        1. Icon部件 -> IconBadge
+        2. 部件集合 -> Stack
+        3. 设置宽高比 -> AspectRatio
+        4. 带限制的容器 -> ConstrainedBox
       */
-      layoutDemo(),
+      LayoutDemo(),
+
+
+      /*
+        - 基础部件
+        1. 页面滚动控件 -> PageView
+        2. 网格视图控件 -> GridView
+      */
+      ViewDemo(),
     ]);
   }
 
