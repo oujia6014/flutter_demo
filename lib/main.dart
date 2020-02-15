@@ -1,33 +1,44 @@
 import 'package:flutter/material.dart';
+
 //import 'package:flutter_app/src/code_1.dart';
 //import 'package:flutter_app/src/code_2.dart';
 //import 'package:flutter_app/src/code_3.dart';
 //import 'package:flutter_app/src/code_4.dart';
-import 'package:flutter_app/demo_1//demo.dart';
+import 'package:flutter_app/demo_1//z_Index.dart';
+
+import 'package:flutter_app/demo_1/e_Navigator.dart';
+
 
 void main() => runApp(MyApp());
 
 //code_4
 class MyApp extends StatelessWidget {
   @override
-  Widget build (BuildContext context) {
+  Widget build(BuildContext context) {
     return new MaterialApp(
-      locale: Locale('en', 'US'),
-      supportedLocales: [
-        Locale('en', 'US'),
-        Locale('zh', 'CN'),
-      ],
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Demo_1(),
+        '/about': (context) => Page(
+              title: 'About',
+            )
+      },
+
+
+//      locale: Locale('en', 'US'),
+//      supportedLocales: [
+//        Locale('en', 'US'),
+//        Locale('zh', 'CN'),
+//      ],
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
           primaryColor: Colors.deepOrangeAccent,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-          splashColor:Colors.white54
-      ),
-      home: new Demo_1(),
+          splashColor: Colors.white54),
+//      home: NavigatorDemo(),
     );
   }
 }
-
 
 // code_1
 //class MyApp extends StatelessWidget {
@@ -74,4 +85,3 @@ class MyApp extends StatelessWidget {
 //    );
 //  }
 //}
-

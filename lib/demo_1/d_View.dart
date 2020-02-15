@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/model/post.dart';
 /*
 - 基础部件
-1. 页面滚动控件 -> PageView
-2. 网格视图控件 -> GridView
+`1
 */
 
 class ViewDemo extends StatelessWidget {

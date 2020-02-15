@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'a_Listdemo.dart';
-import 'b_TextDemo.dart';
-import 'c_LayOutDemo.dart';
-import 'd_ViewDemo.dart';
+import 'a_List.dart';
+import 'b_Text.dart';
+import 'c_LayOut.dart';
+import 'd_View.dart';
 class Demo_1 extends StatelessWidget {
   @override
 
