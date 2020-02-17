@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-//import 'package:flutter_app/src/code_1.dart';
-//import 'package:flutter_app/src/code_2.dart';
-//import 'package:flutter_app/src/code_3.dart';
-//import 'package:flutter_app/src/code_4.dart';
 import 'package:flutter_app/demo_1//z_Index.dart';
 
 import 'package:flutter_app/demo_1/e_Navigator.dart';
-
+import 'package:flutter_app/demo_1/g_From.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,20 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/from',
       routes: {
-        '/': (context) => Demo_1(),
-        '/about': (context) => Page(
-              title: 'About',
-            )
-      },
-
-
-//      locale: Locale('en', 'US'),
-//      supportedLocales: [
-//        Locale('en', 'US'),
-//        Locale('zh', 'CN'),
-//      ],
+    '/': (context) => Demo_1(),
+    '/about': (context) => Page(title: 'About'),
+    '/from':(context) => FromDemo()
+    },
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
           primaryColor: Colors.deepOrangeAccent,
